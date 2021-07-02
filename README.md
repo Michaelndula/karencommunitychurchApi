@@ -2,7 +2,9 @@
 
 ## Karen Community Church Project
 
-## [App Prototype]|(https://www.figma.com/file/wlOeJHnAcQh4JirRWdbFbo/Kcc-App-Prototype?node-id=0%3A1)|
+## [App Prototype]
+
+   |(https://www.figma.com/file/wlOeJHnAcQh4JirRWdbFbo/Kcc-App-Prototype?node-id=0%3A1)|
 
 ## Authentication
 
@@ -30,6 +32,7 @@ Login a Client send a request '{API_URL}/api/logins
 '''example php
 
 {
+	
 	Route::get('/logins', [LoginApiController::class, 'index']);
 	
 	Route::post('/logins', [LoginApiController::class, 'store']);
@@ -143,3 +146,4 @@ class CreateRegistersTable extends Migration
 }
 
 }
+'''
