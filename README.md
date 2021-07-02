@@ -2,7 +2,9 @@
 
 ## Karen Community Church Project
 
-## [App Prototype]|(https://www.figma.com/file/wlOeJHnAcQh4JirRWdbFbo/Kcc-App-Prototype?node-id=0%3A1)|
+## [App Prototype]
+
+|(https://www.figma.com/file/wlOeJHnAcQh4JirRWdbFbo/Kcc-App-Prototype?node-id=0%3A1)|
 
 ## Authentication
 
