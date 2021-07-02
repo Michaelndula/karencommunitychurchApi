@@ -39,3 +39,107 @@ Login a Client send a request '{API_URL}/api/logins
 	Route::delete('/logins/{post}', [LoginApiController::class, 'destroy']);
 	
 }
+'''
+
+## Migrations
+
+'''Creating Clients
+
+{
+
+class CreateRegistersTable extends Migration
+
+{
+
+	/**
+	* Run the migrations.
+	*
+	* @return void
+	*/
+	public function up()
+	{
+		Schema::create('registers', function (Blueprint $table)
+		
+		$table->id();
+		
+		$table->string('First_name');
+		
+		$table->string('Second_name');
+		
+		$table->string('email');
+		
+		$table->string('password');
+		
+		$table->string('confirm_password');
+		
+		$table->timestamps();
+		
+		});
+	}
+
+	/**
+	* Reverse the migrations.
+	*
+	* @return void
+	*/
+	public function down()
+	
+	{
+	
+		Schema::dropIfExists('registers');
+		
+	}
+	
+}
+
+}
+'''
+
+'''Login Clients
+
+{
+
+	class CreateLoginsTable extends Migration
+	
+{
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+     
+    public function up()
+    
+    {
+        Schema::create('logins', function (Blueprint $table) {
+	
+            $table->id();
+	    
+            $table->string('email');
+	    
+            $table->string('password');
+	    
+            $table->timestamps();
+	    
+        });
+	
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+     
+    public function down()
+    
+    {
+    
+        Schema::dropIfExists('logins');
+	
+    }
+    
+}
+
+}
