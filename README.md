@@ -147,3 +147,193 @@ class CreateRegistersTable extends Migration
 
 }
 '''
+
+## Controllers
+
+'''Creating Clients
+
+{
+	class RegisterApiController extends Controller
+	
+{
+
+    public function index()
+
+    {
+    
+        return Register::all();
+	
+    }
+
+    public function store()
+    
+    {
+    
+        request()->validate([
+	
+            'First_name' => 'required',
+	    
+            'Second_name' => 'required',
+	    
+            'email' => 'required',
+	    
+            'password' => 'required',
+	    
+            'confirm_password' => 'required',
+	    
+        ]);
+	
+        return Register::create([
+	
+            'First_name' => request('First_name'),
+	    
+            'Second_name' => request('Second_name')
+	    ,
+            'email' => request('email'),
+	    
+            'password' => request('password'),
+	    
+            'confirm_password' => request('confirm_password'),
+	    
+        ]);
+	
+    }
+
+    public function update(Register $post)
+    
+    {
+        request()->validate([
+	
+            'First_name' => 'required',
+	    
+            'Second_name' => 'required',
+	    
+            'email' => 'required',
+	    
+            'password' => 'required',
+	    
+            'confirm_password' => 'required',
+	    
+        ]);
+
+        $success = $post->update([
+	
+            'First_name' => request('First_name'),
+	    
+            'Second_name' => request('Second_name'),
+	    
+            'email' => request('email'),
+	    
+            'password' => request('password'),
+	    
+            'confirm_password' => request('confirm_password'),
+	    
+        ]);
+
+        return [
+	
+            'success' => $success
+	    
+        ];
+	
+    }
+
+    public function destroy(Register $post)
+
+    {
+    
+        $success = $post->delete();
+	
+
+        return [
+	
+            'success' => $success
+	    
+        ];
+	
+    }
+    
+}'''
+
+'''Login Clients
+
+{
+
+	class LoginApiController extends Controller
+	
+{
+
+    public function index()
+    
+
+    {
+    
+        return Login::all();
+	
+    }
+
+    public function store()
+    
+
+    {
+    
+        request()->validate([
+	
+            'email' => 'required',
+	    
+            'password' => 'required',
+	    
+        ]);
+
+        return Login::create([
+	
+            'email' => request('email'),
+	    
+            'password' => request('password'),
+	    
+        ]);
+	
+    }
+
+    public function update(Login $post)
+    
+    {
+        request()->validate([
+	
+            'email' => 'required',
+	    
+            'password' => 'required',
+	    
+        ]);
+
+        $updated = $post->update([
+	
+            'email' => request('email'),
+	    
+            'password' => request('password'),
+	    
+        ]);
+
+        return [
+	
+            'updated' => $updated
+	    
+        ];
+	
+    }
+
+    public function destroy(Login $post)
+    
+    {
+        $deleted = $post->delete();
+	
+
+        return [
+	
+            'deleted' => $deleted
+	    
+        ];
+	
+    }
+    
+}'''
