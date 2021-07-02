@@ -46,11 +46,11 @@ Login a Client send a request '{API_URL}/api/logins
 
 ## Migrations
 
-'''Creating Clients
+###'''Creating Clients
 
 {
 
-class CreateRegistersTable extends Migration
+	class CreateRegistersTable extends Migration
 
 {
 
@@ -98,7 +98,7 @@ class CreateRegistersTable extends Migration
 }
 '''
 
-'''Login Clients
+###'''Login Clients
 
 {
 
@@ -150,7 +150,7 @@ class CreateRegistersTable extends Migration
 
 ## Controllers
 
-'''Creating Clients
+###'''Creating Clients
 
 {
 	class RegisterApiController extends Controller
@@ -255,7 +255,7 @@ class CreateRegistersTable extends Migration
     
 }'''
 
-'''Login Clients
+###'''Login Clients
 
 {
 
