@@ -30,6 +30,7 @@ Login a Client send a request '{API_URL}/api/logins
 '''example php
 
 {
+	
 	Route::get('/logins', [LoginApiController::class, 'index']);
 	
 	Route::post('/logins', [LoginApiController::class, 'store']);
